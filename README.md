@@ -5,3 +5,5 @@
 ## Assignment 1 : Fetch data from Random Joke API -> RandomJokeController
 
 ## Assignment 2 : Fetch data from Random User API -> RandomUserController
+
+## Assignment 3 : Fetch data from Chucknorris Random Joke API -> ChucknorrisRandomJokeController
