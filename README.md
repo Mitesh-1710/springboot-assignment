@@ -9,3 +9,5 @@
 ## Assignment 3 : Fetch data from Chucknorris Random Joke API -> ChucknorrisRandomJokeController
 
 ## Assignment 4 : Fetch data from Zippopotam API -> ZippopotamController
+
+## Assignment 5 : Fetch data from Nationalize API -> NationalizeController
