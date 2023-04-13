@@ -6,11 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.geekster.springboot.assignment.constants.ApiPath;
+import com.geekster.springboot.assignment.constants.ExternalApiUrl;
 import com.geekster.springboot.assignment.response.ChucknorrisRandomJokeResponse;
 import com.geekster.springboot.assignment.service.ChucknorrisRandomJokeService;
 
 @RestController
-@RequestMapping("api/v1/chucknorris-random-joke")
+@RequestMapping(ApiPath.CHUCKNORRIS_RANDOM_JOKES_API)
 public class ChucknorrisRandomJokeController {
 
 	@Autowired
@@ -22,7 +24,7 @@ public class ChucknorrisRandomJokeController {
 	@GetMapping
 	public ChucknorrisRandomJokeResponse getChucknorrisRandomJoke() {
 
-		String url = "https://api.chucknorris.io/jokes/random";
+		String url = ExternalApiUrl.CHUCKNORRIS_RANDOM_JOKES_URL;
 		String apiResponse = restTemplate.getForEntity(url, String.class).getBody();
 		return chucknorrisRandomJokeService.getChucknorrisRandomJoke(apiResponse);
 

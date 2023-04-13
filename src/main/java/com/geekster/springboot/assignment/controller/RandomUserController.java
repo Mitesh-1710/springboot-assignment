@@ -6,25 +6,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.geekster.springboot.assignment.response.RandomJokeResponse;
-import com.geekster.springboot.assignment.service.RandomJokeService;
+import com.geekster.springboot.assignment.constants.ApiPath;
+import com.geekster.springboot.assignment.constants.ExternalApiUrl;
+import com.geekster.springboot.assignment.response.RandomUserResponse;
+import com.geekster.springboot.assignment.service.RandomUserService;
 
 @RestController
-@RequestMapping("api/v1/random-joke")
+@RequestMapping(ApiPath.RANDOM_USER_API)
 public class RandomUserController {
 
 	@Autowired
 	private RestTemplate restTemplate;
 
 	@Autowired
-	private RandomJokeService randomJokeService;
+	private RandomUserService randomUserService;
 
 	@GetMapping
-	public RandomJokeResponse getRandomJoke() {
+	public RandomUserResponse getRandomUser() {
 
-		String url = "https://official-joke-api.appspot.com/random_joke";
+		String url = ExternalApiUrl.RANDOM_USER_URL;
 		String apiResponse = restTemplate.getForEntity(url, String.class).getBody();
-		return randomJokeService.getRandomJoke(apiResponse);
+		return randomUserService.getRandomUser(apiResponse);
 
 	}
 

@@ -6,11 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.geekster.springboot.assignment.constants.ApiPath;
+import com.geekster.springboot.assignment.constants.ExternalApiUrl;
 import com.geekster.springboot.assignment.response.NationalizeResponse;
 import com.geekster.springboot.assignment.service.NationalizeService;
 
 @RestController
-@RequestMapping("api/v1/nationalize")
+@RequestMapping(ApiPath.NATIONALIZE_API)
 public class NationalizeController {
 
 	@Autowired
@@ -22,7 +24,7 @@ public class NationalizeController {
 	@GetMapping
 	public NationalizeResponse getNationalize() {
 
-		String url = "https://api.nationalize.io/?name=nathaniel";
+		String url = ExternalApiUrl.NATIONALIZE_URL;
 		String apiResponse = restTemplate.getForEntity(url, String.class).getBody();
 		return nationalizeService.getNationalize(apiResponse);
 
