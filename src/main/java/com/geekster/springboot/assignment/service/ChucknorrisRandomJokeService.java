@@ -5,12 +5,7 @@ import org.springframework.stereotype.Service;
 import com.geekster.springboot.assignment.response.ChucknorrisRandomJokeResponse;
 
 @Service
-public class ChucknorrisRandomJokeService {
+public interface ChucknorrisRandomJokeService {
 
-	public ChucknorrisRandomJokeResponse getChucknorrisRandomJoke(String apiResponse) {
-
-		return new ChucknorrisRandomJokeResponse(apiResponse);
-
-	}
-
+	public ChucknorrisRandomJokeResponse getChucknorrisRandomJoke(String apiResponse);
 }
