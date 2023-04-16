@@ -11,5 +11,6 @@ public class ApiPath {
 	public static final String RANDOM_USER_API = "api/v1/random-user";
 	public static final String RANDOM_JOKE_API = "api/v1/random-joke";
 	public static final String ZIPPOPOTAM_API = "api/v1/zippopotam";
+	public static final String EMAIL_SENDER_API = "api/v1/send-mail";
 
 }

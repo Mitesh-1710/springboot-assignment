@@ -11,3 +11,5 @@
 ### Assignment 4 : Fetch data from Zippopotam API -> ZippopotamController
 
 ### Assignment 5 : Fetch data from Nationalize API -> NationalizeController
+
+### Assignment 6 : Send Email Using Java -> EmailSenderController
