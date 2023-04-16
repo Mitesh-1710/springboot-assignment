@@ -6,6 +6,6 @@ public class ApiResponse {
 
 	}
 
-	public static final String EMAIL_SENDER_API_RESPONSE = "Email Sent Sucessfully!";
+	public static final String EMAIL_SENDER_API_RESPONSE = "Email Sent Successfully!";
 
 }
