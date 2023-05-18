@@ -10,8 +10,6 @@
 
 #### Assignment 5 : Fetch data from Nationalize API -> NationalizeController
 
-#### Assignment 6 : Send Email Using Java -> EmailSenderController
-
 - Frameworks and Language used :
   - Spring Boot (SNAPSHOT 3.0.6)
   - Java 17
